@@ -18,6 +18,8 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 
+my_wolf_id='8EW922-36E8QQYRJT'
+
 class GUicloudbot:
 
     def __init__(self,username,password):
@@ -220,7 +222,7 @@ if __name__ == "__main__":
                     print(str(e))
 
         elif 'what is' in query or 'who is' in query:
-            client=wolframalpha.Client('8EW922-36E8QQYRJT')
+            client=wolframalpha.Client(my_wolf_id)
             res = client.query(query)
 
             try:
